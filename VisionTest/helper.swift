@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIViewController {
-    private func convertUnitToPoint (originalImageRect: CGRect, targetRect: CGRect) -> CGRect {
+    public func convertUnitToPoint (originalImageRect: CGRect, targetRect: CGRect) -> CGRect {
         var pointRect = targetRect
         
         pointRect.origin.x = originalImageRect.origin.x + (targetRect.origin.x * originalImageRect.size.width)
@@ -19,7 +19,7 @@ extension UIViewController {
         return pointRect
     }
     
-    private func determineScale(cgImage: CGImage, imageViewFrame: CGRect) -> CGRect {
+    public func determineScale(cgImage: CGImage, imageViewFrame: CGRect) -> CGRect {
         let originalWidth = CGFloat(cgImage.width)
         let originalHeight = CGFloat(cgImage.height)
         
